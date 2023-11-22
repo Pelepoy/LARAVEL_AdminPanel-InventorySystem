@@ -2,7 +2,7 @@
 
 @section('contents')
     <div class="d-flex aligh-items-center justify-content-between">
-        <h1 class="mb-0 font-weight-bold">LIST OF PRODUCT</h1>
+        <h1 class="mb-0 font-weight-bold">LIST OF PRODUCTS</h1>
         <a href="{{ route ('products.create')}}" class="btn btn-info">Add Product</a>
     </div>
     <hr />
