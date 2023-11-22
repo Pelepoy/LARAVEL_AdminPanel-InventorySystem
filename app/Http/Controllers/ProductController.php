@@ -102,4 +102,15 @@ class ProductController extends Controller
 
         return back()->with('success', 'Product deleted successfully.');
     }
+
+    public function search()
+    {
+        $title = 'Search Product | Laravel Inventory Management System';
+        $search_text = isset($_GET['query']) ? $_GET['query'] : '';
+        $products = Product::where('title', 'LIKE', '%' . $search_text . '%')->get();
+        return view('products.search', [
+            'products' => $products,
+            'title' => $title,
+        ]);
+    }
 }
