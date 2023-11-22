@@ -13,7 +13,7 @@ class AuthController extends Controller
 {
     public function register()
     {
-        $title = 'Register | Laravel Ecommerce';
+        $title = 'Register | Laravel Inventory Management System';
 
         return view('auth.register', [
             'title' => $title,
@@ -48,7 +48,7 @@ class AuthController extends Controller
     public function login()
     {
 
-        $title = 'Login | Laravel Ecommerce';
+        $title = 'Login | Laravel Inventory Management System';
 
         if (View::exists('auth.login')) {
             return view('auth.login', [
@@ -90,7 +90,7 @@ class AuthController extends Controller
 
     public function profile()
     {
-        $title = 'Profile | Laravel Ecommerce';
+        $title = 'Profile | Laravel Inventory Management System';
 
         return view('profile', [
             'title' => $title,
@@ -99,7 +99,7 @@ class AuthController extends Controller
 
     public function admin()
     {
-        $title = 'Admin | Laravel Ecommerce';
+        $title = 'Admin | Laravel Inventory Management System';
         $admins = User::orderBy('created_at', 'desc')->where('level', 'Admin')->get();
 
         return view('auth.admin', [

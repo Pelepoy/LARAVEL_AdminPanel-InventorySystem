@@ -12,7 +12,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $title = 'Products | Laravel Ecommerce';
+        $title = 'Products | Laravel Inventory Management System';
         $products = Product::orderBy('created_at', 'desc')->get();
 
         return view('products.index', [
@@ -26,7 +26,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        $title = 'Create Product | Laravel Ecommerce';
+        $title = 'Create Product | Laravel Inventory Management System';
         return view('products.create', [
             'title' => $title,
         ]);
