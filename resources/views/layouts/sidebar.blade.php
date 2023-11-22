@@ -20,15 +20,22 @@
     
     <li class="nav-item">
       <a class="nav-link" href="{{ route ('products')}}">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <i class="fab fa-product-hunt"></i>
         <span>Product</span></a>
     </li>
     
     <li class="nav-item">
       <a class="nav-link" href="{{ route ('profile') }}">
-        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <i class="fas fa-address-card"></i>
         <span>Profile</span></a>
     </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="{{ route ('admin') }}">
+        <i class="fas fa-users-cog"></i>
+        <span>Admins</span></a>
+    </li>
+    
     
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
