@@ -96,4 +96,15 @@ class AuthController extends Controller
             'title' => $title,
         ]);
     }
+
+    public function admin()
+    {
+        $title = 'Admin | Laravel Ecommerce';
+        $admins = User::orderBy('created_at', 'desc')->where('level', 'Admin')->get();
+
+        return view('auth.admin', [
+            'title' => $title,
+            'admins' => $admins,
+        ]);
+    }
 }
