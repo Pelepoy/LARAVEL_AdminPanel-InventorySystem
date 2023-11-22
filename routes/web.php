@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ProductController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,5 +50,6 @@ Route::middleware('auth')->group(function () {
         Route::delete('delete/{id}', 'destroy')->name('products.delete');
     });
 
-    Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
+    Route::get('profile', [AuthController::class, 'profile'])->name('profile');
+    Route::get('admin', [AuthController::class, 'admin'])->name('admin');
 });
