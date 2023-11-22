@@ -39,11 +39,11 @@
                                             </div>
                                         </div>
                                         <hr>
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
+                                        <button type="submit" class="btn btn-info btn-user btn-block">Login</button>
                                         <hr>
                                     </form>
                                     <div class="text-center">
-                                        <a class="small" href="{{ route('register') }}">Create an Account!</a>
+                                        <a class="small text-info" href="{{ route('register') }}">Create an Account!</a>
                                     </div>
                                 </div>
                             </div>
