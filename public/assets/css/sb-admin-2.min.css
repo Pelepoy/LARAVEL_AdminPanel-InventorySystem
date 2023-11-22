@@ -9926,12 +9926,12 @@ a:focus {
     }
 }
 .bg-login-image {
-    background-image: url('/assets/img/sicmundus.jpg');
+    background-image: url('/assets/img/frog.jpg');
     background-position: center;
     background-size: cover;
 }
 .bg-register-image {
-    background-image: url('/assets/img/sicmundus.jpg');
+    background-image: url('/assets/img/frog.jpg');
     background-position: center;
     background-size: cover;
 }
