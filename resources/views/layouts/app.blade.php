@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <title>{{ $title ?? 'Laravel Ecommerce'}}</title>
+  <title>{{ $title ?? 'Laravel Inventory Management System | Admin Panel'}}</title>
   <!-- Favicon -->
   <link rel="shortcut icon" href="{{ asset('assets/img/dashboard.png')}}" type="image/x-icon">
   <!-- Custom fonts for this template-->
