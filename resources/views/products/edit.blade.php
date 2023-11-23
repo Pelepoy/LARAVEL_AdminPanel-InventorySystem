@@ -24,7 +24,7 @@
             </div>
             <div class="col mb-3">
                 <label class="form-label">Description</label>
-                <textarea class="form-control" name="description" placeholder="Descriptoin">{{ $product->description }}</textarea>
+                <textarea class="form-control" name="description" placeholder="Description">{{ $product->description }}</textarea>
             </div>
         </div>
         <div class="row">
@@ -33,4 +33,12 @@
             </div>
         </div>
     </form>
+<script>
+ window.originalData = {
+        title: "{{ $product->title }}",
+        price: "{{ $product->price }}",
+        product_code: "{{ $product->product_code }}",
+        description: "{{ $product->description }}",
+    };
+</script>
 @endsection
