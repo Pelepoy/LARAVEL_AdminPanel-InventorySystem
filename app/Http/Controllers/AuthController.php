@@ -24,23 +24,20 @@ class AuthController extends Controller
     public function registerSave(Request $request)
     {
         $validated = $request->validate([
-            'first_name' => 'required|max:255|regex:/^[a-zA-Z ]+$/',
-            'last_name' => 'required|max:25|regex:/^[a-zA-Z ]+$/',
-            'email' => 'required|email|unique:users,email|max:255',
-            'password' => 'required|min:8|confirmed',
+            'first_name'        =>     'required|max:255|regex:/^[a-zA-Z]+$/',
+            'last_name'         =>     'required|max:255|regex:/^[a-zA-Z]+$/',
+            'email'             =>     'required|email|unique:users,email|max:255',
+            'password'          =>     'required|min:8|confirmed',
         ]);
-
-        $user = User::create([
-            'first_name' => $validated['first_name'],
-            'last_name' => $validated['last_name'],
-            'email' => $validated['email'],
-            'password' => bcrypt($validated['password']),
-            'level' => 'Admin',
+        User::create([
+            'first_name'        =>     $validated['first_name'],
+            'last_name'         =>     $validated['last_name'],
+            'email'             =>     $validated['email'],
+            'password'          =>     bcrypt($validated['password']),
+            'level'             =>     'Admin',
+            'email_verified_at' =>     now(),
+            'remember_token'    =>     csrf_token(),
         ]);
-        $user->email_verified_at = now();
-        $user->remember_token = csrf_token();
-
-        $user->save();
 
         return redirect()->route('login')->with('success', 'User created Successfully.');
     }
@@ -70,7 +67,7 @@ class AuthController extends Controller
         if (auth()->attempt($validated, $request->boolean('remember'))) {
             $request->session()->regenerate();
 
-            return redirect()->route('products')->with('success', 'Login Successfully.');
+            return to_route('products')->with('success', 'Login Successfully.');
         }
 
         return back()->withErrors([
